@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+label, button, h2 {
+    margin: 20px 0;
+}
+button {
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #eeeeee;
+    border-radius: 4%;
+}
+
+.error{
+    display: block;
+    margin: 0;
+    color: rgb(239, 81, 81);
+}
