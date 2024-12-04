@@ -1,0 +1,142 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBAC Viagems</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1 id="inicio">EBAC Viagens</h1>
+
+                <nav class="navbar">
+                    <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+                </nav>
+                <nav class="collapse navbar-collapse justify-content-end" id="navbarToggleExternalContent">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#viagens">Viagens pelo mundo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destaques">Destaques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promoções">Promoções</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div id="carousel-exemplo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img class="d-block w-100" src="./img/img1.jpg" />
+                        <div class="carousel-caption">
+                            <h2>Destino 1</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="./img/img2.jpg" />
+                        <div class="carousel-caption">
+                            <h2>Destino 2</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="./img/img3.jpg" />
+                        <div class="carousel-caption">
+                            <h2>Destino 3</h2>
+                        </div>
+                    </div>
+                </div>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" class="active" data-bs-target="#carousel-exemplo" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div id="viagens" class="col-lg-4 col-sm-9 col-md-6">
+                <article class="card">
+                    <header class="card-header">
+                        Viagems pelo mundo
+                    </header>
+                    <img src="https://via.placeholder.com/100x100" class="card-img-top" alt="Image cap" />
+                    <div class="card-body">
+                        <h4 class="card-title">Veja as opçoes de destino que ofertamos</h4>
+                        <h6 class="card-subtitle">veja o proximo destino</h6>
+                        <p class="card-text mt-2">
+                            Confira os lugares destacados que pode conhecer ainda esse ano.
+                        </p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/12/2024 as 19:00:00</time>
+                    </footer>
+                </article>
+            </div>
+            <div id="destaques" class="col-lg-4 col-sm-9 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Destaques
+                    </div>
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title">Vale Viagem e Vale Presentes</h4>
+                        <h6 class="card-subtitle">A melhor manera de presentar</h6>
+                        <p class="card-text mt-2">
+                            Pode ser utilizado na compra de passagens aéreas nacionais ou internacionais.
+                        </p>
+                        <a href="#" class="btn btn-primary">Adquirir</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/12/2024 as 19:00:00</time>
+                    </footer>
+                </div>
+            </div>
+            <div id="promoções" class="col-lg-4 col-sm-9 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Promoções
+                    </div>
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title">Viagens mais economicas</h4>
+                        <h6 class="card-subtitle">Viaje mais por menos</h6>
+                        <p class="card-text mt-2">
+                            |Confira a nossas Promoções, são por tempo limitado!
+                        </p>
+                        <a href="#" class="btn btn-primary">Ver Promoções</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>04/12/2024 as 19:00:00</time>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>

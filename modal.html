@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Abrir Menu
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, eius aperiam. Deserunt, sapiente quasi rerum quas dolorem adipisci ducimus fugiat laboriosam voluptas aperiam, deleniti quae, a molestias atque ad. Voluptates.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modalExemplo = new bootstrap.Modal('#exampleModal', `data-bs-delay='{"show":150,"hide":150}'`)
+            setTimeout(function() {
+                modalExemplo.show();
+            }, 3000);
+        })
+    </script>
+
+</body>
+</html>
