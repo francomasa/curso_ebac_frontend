@@ -1,0 +1,16 @@
+{
+  "name": "exercicio_sass",
+  "version": "1.0.0",
+  "description": "exercicio de sass da ebac",
+  "license": "ISC",
+  "author": "Franco",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass source/styles.scss build/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.83.1"
+  }
+}
