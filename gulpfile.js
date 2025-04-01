@@ -1,13 +1,3 @@
-import gulp from 'gulp';
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-const sass = gulpSass( dartSass );
-
-import sourcemaps from 'gulp-sourcemaps';
-import uglify from 'gulp-uglify';
-import obfuscate from 'gulp-obfuscate';
-import imagemin from 'gulp-imagemin';
-/*
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps')
@@ -16,19 +6,11 @@ const obfuscate = require('gulp-obfuscate');
 const imagemin = require('gulp-imagemin');
 
 function comprimirImagens(){
-        return gulp.src('source/images/*') // Substitua pelo caminho correto das suas imagens
+        return gulp.src('source/images/*') 
             .pipe(imagemin())
             .pipe(gulp.dest('build/images'));
 }
 
-*/
-
-
-function comprimirImagens(){
-        return gulp.src('src/images/*')
-            .pipe(imagemin())
-            .pipe(gulp.dest('dist/images'));
-}
 
 function comprimirJavaScript() {
     return gulp.src('./source/scripts/*.js')
@@ -51,34 +33,8 @@ function compilaSass(){
 }
 
 
-function funcaoPadrao(callback){
-    setTimeout(function() {
-        console.log("executando via gulp");
-        callback();
-    }, 2000);
-}
-
-function dizOi(callback){
-    console.log("Ola gulp");
-    disTchau();
-    callback();
-}
-
-function disTchau(){
-    console.log("Tchau gulp");
-}
-
-//executando tarefas em series
-//exports.default = gulp.series(funcaoPadrao, dizOi);
-exports.default = gulp.parallel(funcaoPadrao, dizOi);
-exports.dizOi = dizOi;
-exports.sass = compilaSass;
-//function para que o gulp corra automaticamente cada vez que tiver
-//alguma modificação nos arquivos scss
-exports.watch = function(){
+exports.default = function(){
     gulp.watch('./source/styles/*.scss',{ ignoreInitial: false }, gulp.series(compilaSass));
+    gulp.watch('./source/scripts/*.js',{ ignoreInitial: false }, gulp.series(comprimirJavaScript));
+    gulp.watch('./source/images/*',{ ignoreInitial: false }, gulp.series(comprimirImagens));
 }
-
-exports.javascript = comprimirJavaScript;
-
-exports.images = comprimirImagens;

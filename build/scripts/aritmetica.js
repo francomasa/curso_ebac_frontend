@@ -1,1 +1,1 @@
-let somar=require("./sum.js");console.log("somar: ",somar(10,20));
+import somar from"../sum.js";console.log("somar: ",somar(10,20));
