@@ -30,6 +30,7 @@ const alunos2 = alunos.map(function(itemAtual){
 
 console.log(alunos2);
 //se no achar no array retorna undefined
+console.log('find');
 const paula = alunos2.find(function(itemAtual){
     return itemAtual.nome == 'Paula';
 });

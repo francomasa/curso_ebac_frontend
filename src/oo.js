@@ -20,18 +20,19 @@ class Pokemon {
     }
 
     getHp() {
-        console.log(this.#hp)
+        return this.#hp;
     }
 }
 
 
 class Pikachu extends Pokemon {
     constructor(){
-        //para assignar os valores na clase pai
+        //para assignar os valores na clase pai e herdar na clase filha
         super('Pikachu', 'Eletrico');
     }
     atacar(){
-        console.log(`${this.nome} atacou com choque do trovão`);
+        super.atacar('bolo de fogo');
+        console.log(`${this.nome} (${this.getHp()}) atacou com choque do trovão`);
     }
 }
 
@@ -51,4 +52,4 @@ console.log(picachu1 instanceof Pokemon);
 picachu1.recebeuAtaque();
 picachu1.atacar();
 
-picachu1.getHp()
+console.log(picachu1.getHp());
